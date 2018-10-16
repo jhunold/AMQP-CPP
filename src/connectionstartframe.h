@@ -194,8 +194,8 @@ public:
         
         // fill the peer properties
         properties["product"] = "Copernica AMQP library";
-        properties["version"] = "Unknown";
-        properties["platform"] = "Unknown";
+        properties["version"] = AMQPCPP_VERSION;
+        properties["platform"] = AMQPCPP_PLATFORM;
         properties["copyright"] = "Copyright 2015 - 2018 Copernica BV";
         properties["information"] = "https://www.copernica.com";
         properties["capabilities"] = capabilities;

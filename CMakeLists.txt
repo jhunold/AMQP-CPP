@@ -85,6 +85,9 @@ else()
     add_library(${PROJECT_NAME} STATIC ${SRCS})
 endif()
 
+target_compile_definitions(${PROJECT_NAME} PRIVATE AMQPCPP_VERSION="${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}")
+target_compile_definitions(${PROJECT_NAME} PRIVATE AMQPCPP_PLATFORM="${CMAKE_SYSTEM}")
+
 # install rules
 # ------------------------------------------------------------------------------------------------------
 
