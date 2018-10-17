@@ -24,8 +24,11 @@ option(AMQP-CPP_BUILD_SHARED "Build shared library. If off, build will be static
 option(AMQP-CPP_LINUX_TCP "Build linux sockets implementation." OFF)
 option(AMQP-CPP_BUILD_EXAMPLES "Build amqpcpp examples" OFF)
 
-# ensure c++11 on all compilers
-set (CMAKE_CXX_STANDARD 11)
+# ensure at least c++11 on all compilers but allow greater
+set (CMAKE_CXX_STANDARD_REQUIRED ON)
+if (NOT CMAKE_CXX_STANDARD OR CMAKE_CXX_STANDARD EQUAL 98)
+   set (CMAKE_CXX_STANDARD 11)
+endif()
 
 # add source files
 # ------------------------------------------------------------------------------------------------------
